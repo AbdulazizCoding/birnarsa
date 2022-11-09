@@ -1,0 +1,63 @@
+@model CreateOrUpdatePostViewModel
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label asp-for="@Model.Title" class="form-label">Title</label>
+        <input type="text" asp-for="@Model.Title" class="form-control" placeholder="Title">
+      </div>
+      <div class="mb-3">
+        <label asp-for="@Model.Content" class="form-label">Content</label>
+        <textarea asp-for="@Model.Content" class="form-control"></textarea>
+      </div>
+      <div class="mb-3">
+        <label asp-for="@Model.Image" class="form-label">Image</label>
+        <input type="file" accept="image/*" asp-for="@Model.Image" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>
+
+
+@* <section class="create-post">
+            <div class="container1">
+                <div class="signin-content">
+                    <div class="signin-form">
+                        <h2 class="form-title">Log In</h2>
+                        <form method="post" class="register-form" asp-controller="Account" asp-action="LogIn">
+                            <input hidden="true" asp-for="@Model.ReturnUrl">
+                            <div class="form-group">
+                                <label asp-for="@Model.UserName" class="form-label"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input asp-for="@Model.UserName" class="form-control" type="text"placeholder="Username"/>
+                                <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="@Model.Password" class="form-label" ><i class="zmdi zmdi-lock"></i></label>
+                                <input asp-for="@Model.Password" class="form-control" type="password" placeholder="Password"/>
+                                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                            </div>  *@
+                            @* Save cooki *@
+                            @* <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div> *@
+                            @* <div class="form-group form-button">
+                                <input type="submit" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                              <li>
+                                  <a href=""> 
+                                    Telegram *@
+                                    @* <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> *@
+                                  @* </a>
+                              </li>
+                            </ul>
+                        </div>
+                        <a asp-controller="Account" asp-action="ForgotPassword">Forget your password</a>
+                    </div>
+                </div>
+            </div>
+        </section> <br><br>
+<br><br><br> *@

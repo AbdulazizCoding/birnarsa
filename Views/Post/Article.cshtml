@@ -1,0 +1,14 @@
+@model PostViewModel
+<div class="container">
+    <div class="">
+        <p> Image Path - @Model.Image </p>
+        <img src="~/Media/Profile/Images/@Model.Image" alt="User Avatar">
+        <h3>@Model.Title</h3>
+        <p>@Model.Content</p>
+        @if(@Model.IsEdited)
+        {
+            <span>@Model.UpdatedAt</span>
+        }
+        <span>@Model.CreatedAt</span>
+    </div>
+</div>
